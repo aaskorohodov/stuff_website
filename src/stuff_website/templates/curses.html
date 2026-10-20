@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="/static/css/curses.css">
+{% endblock %}
+
+{% block content %}
+<section class="card-section">
+    <h2>Curses</h2>
+    <p class="subtitle">Do you want to insult someone? Click the button below</p>
+
+    <div class="interactive-box">
+        <button id="fetch-btn" class="action-btn">Generate a curse</button>
+        <div id="text-display" class="text-display-box placeholder">
+            Click it...
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script src="/static/js/curses.js"></script>
+{% endblock %}

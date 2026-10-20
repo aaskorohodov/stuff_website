@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title if title else "My Site" }}</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <div class="site-wrapper">
+        <header>
+            <nav class="nav-container">
+                <a href="/" class="brand-link">Home</a>
+            </nav>
+        </header>
+
+        <main class="content-container fade-in">
+            {% block content %}{% endblock %}
+        </main>
+
+        <footer>
+            <div class="footer-container">
+                <p>&copy; 2026 DY. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/static/js/main.js"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>
