@@ -1,0 +1,68 @@
+/* Card & Interactive UI */
+.card-section {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    border: 1px solid var(--border-color);
+    width: 100%;
+    max-width: 540px;
+    text-align: center;
+}
+
+.interactive-box {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    align-items: center;
+}
+
+.action-btn {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.action-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.action-btn:active {
+    transform: scale(0.98);
+}
+
+.action-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.text-display-box {
+    width: 100%;
+    min-height: 80px;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #f1f3f5;
+    border: 1px dashed var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+    font-size: 1.05rem;
+    transition: opacity 0.2s ease;
+}
+
+.text-display-box.placeholder {
+    color: #868e96;
+    font-style: italic;
+}
+
+.text-display-box.loading {
+    opacity: 0.5;
+}
