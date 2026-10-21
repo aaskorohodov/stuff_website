@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="/static/css/your_mama.css">
+{% endblock %}
+
+{% block content %}
+<section class="card-section">
+    <h2>Your Mama</h2>
+    <p class="subtitle">You know, about your mama...</p>
+
+    <div class="interactive-box">
+        <button id="fetch-btn" class="action-btn">Mama</button>
+        <div id="text-display" class="text-display-box placeholder">
+            Click it...
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script src="/static/js/your_mama.js"></script>
+{% endblock %}

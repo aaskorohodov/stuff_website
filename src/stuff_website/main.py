@@ -4,7 +4,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
 from stuff_website.logic.curses import get_random_curse
-
+from stuff_website.logic.your_mama import get_random_mama
 
 app = FastAPI()
 
@@ -21,13 +21,24 @@ async def read_index(request: Request):
 
 
 @app.get("/curses", response_class=HTMLResponse)
-async def read_subpage1(request: Request):
+async def curses(request: Request):
   return templates.TemplateResponse(
       request, "curses.html", {"title": "Curses"}
   )
 
 
-# API Endpoint returning JSON
 @app.get("/api/random-curse")
-async def fetch_random_text():
+async def fetch_random_curse():
   return {"text": get_random_curse()}
+
+
+@app.get("/your_mama", response_class=HTMLResponse)
+async def your_mama(request: Request):
+  return templates.TemplateResponse(
+      request, "your_mama.html", {"title": "Your Mama..."}
+  )
+
+
+@app.get("/api/random-your-mama")
+async def fetch_random_mama():
+  return {"text": get_random_mama()}
